@@ -31,6 +31,7 @@ class StartPage extends Component {
               autoComplete="off"
               required
               name="user"
+              value={this.state.user}
               onChange={this.captureInput}
             />
             <label htmlFor="password">Password</label>
@@ -39,6 +40,7 @@ class StartPage extends Component {
               autoComplete="off"
               required
               name="password"
+              value={this.state.password}
               onChange={this.captureInput}
             />
             <Link
