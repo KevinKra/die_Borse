@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 class StartPage extends Component {
   state = {
-    login: "",
+    user: "",
     password: ""
   };
 
@@ -14,7 +14,8 @@ class StartPage extends Component {
   };
 
   toDashboard = e => {
-    this.props.history.push();
+    e.preventDefault();
+    this.props.history.push(`/${this.state.user}`);
   };
 
   render() {
@@ -22,20 +23,20 @@ class StartPage extends Component {
       <main className="StartPage">
         <div className="image" />
         <section className="login">
-          <form>
+          <form onSubmit={e => this.toDashboard(e)}>
             <h2>Welcome to dieBörse</h2>
-            <label htmlFor="login">Email or Username</label>
+            <label htmlFor="user">Email or Username</label>
             <input
               type="text"
-              autocomplete="off"
+              autoComplete="off"
               required
-              name="login"
+              name="user"
               onChange={this.captureInput}
             />
             <label htmlFor="password">Password</label>
             <input
               type="password"
-              autocomplete="off"
+              autoComplete="off"
               required
               name="password"
               onChange={this.captureInput}
