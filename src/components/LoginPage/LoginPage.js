@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./StartPage.scss";
+import "./LoginPage.scss";
 import { Link } from "react-router-dom";
 
-class StartPage extends Component {
+class LoginPage extends Component {
   state = {
     user: "",
     password: ""
@@ -20,7 +20,7 @@ class StartPage extends Component {
 
   render() {
     return (
-      <main className="StartPage">
+      <main className="LoginPage">
         <div className="image" />
         <section className="login">
           <form onSubmit={e => this.toDashboard(e)}>
@@ -59,4 +59,4 @@ class StartPage extends Component {
   }
 }
 
-export default StartPage;
+export default LoginPage;
