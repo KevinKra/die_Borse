@@ -1,6 +1,31 @@
 @import "../../variables";
-.LineGraph {
-  border: 1px solid $accent;
-  height: 300px;
-  width: 650px;
+.DashBoard {
+  margin-top: 2rem;
+  color: white;
+  .primary-content {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+  }
+
+  .support {
+    margin: 1.5rem 0 0 2rem;
+    box-shadow: 0px 0px 25px $darkest;
+    width: 325px;
+    height: 700px;
+  }
+  .ph {
+    height: 70px;
+    border-top: 1px solid $darkest;
+  }
+}
+
+.line-graph {
+  border-bottom: 1px solid $darkest;
 }
